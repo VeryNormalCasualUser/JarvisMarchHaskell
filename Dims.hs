@@ -1,4 +1,5 @@
 module Dims where
+    
 import GHC.Float (int2Double)
 
 data Dim = ThreeD (Double, Double, Double) | TwoD (Double, Double) | D Double 

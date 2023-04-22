@@ -5,12 +5,12 @@ import Data.Set (toList, fromList)
 mkUniq :: Ord a => [a] -> [a]
 mkUniq = toList . fromList
 
-first :: Int -> [(Int, Int)]
-first size = take size $ map (fix size) $ zip [1,3..] [2, 7 ..]
+first :: Int -> [(Integer, Integer)]
+first size = take size $ map (fix (fromIntegral size)) $ zip [1,3..] [2, 7 ..]
 
 
 
-fix :: Int -> (Int, Int) -> (Int, Int)
+fix :: Integer -> (Integer, Integer) -> (Integer, Integer)
 fix size (a, b) = 
     (x, y)
     where 
